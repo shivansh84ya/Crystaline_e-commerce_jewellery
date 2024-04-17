@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <style>
+      #prod-container,#earring-container{
+        width:90%;
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        margin:auto;
+        gap: 20px 20px;
+      }
+      img{
+        width:100%;
+      }
+      #prod-container button,#earring-container button{
+        color: white;
+        background-color:#4f3267;
+        border: none;
+        width:80px;
+        height:30px;
+        margin-left: 20%;
+        margin-top: 5%;
+      }
+      #main_form input{
+        margin-top: 10%;
+        height:30px;
+        width: 200px;
+        margin-left: 5%;
+        border-color: #4f3267;
+      }
+      #main_form #submit_id{
+        background-color: #4f3267;
+        color: aliceblue;
+        margin-left: 20%;
+      }
+      #main_form #product_type_label{
+        margin-top: 10%;
+
+      }
+      #main_form #product_type{
+          margin-left: 30%;
+          margin-top: -8%;
+      }
+
+    </style>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/admin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo" id="head_logo">
+            <img src="./images/Crystaline (2).png" alt="Logo" />
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="#" class="active">
+            <span class="material-icons-sharp"> dashboard </span>
+            <h3>Dashboard</h3>
+          </a>
+          
+          <a href="#">
+            <span class="material-icons-sharp"> receipt_long </span>
+            <button>Orders</button>
+          </a>
+          
+          <a href="#">
+            <span class="material-icons-sharp"> inventory </span>
+            <button id="products_btn">Products</button>
+          </a>
+          
+          <a href="#" id="add_product">
+            <span class="material-icons-sharp"> add </span>
+            <button>Add Product</button>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+
+      <main>
+        <h1 id="change_dash">Dashboard</h1>
+
+        <div id="prod-container"></div>
+        <div id="earring-container"></div>
+
+
+
+        <div class="insights">
+         
+          
+
+       
+      </main>
+
+      <div class="right">
+        <div class="top">
+          <button id="menu-btn">
+            <span class="material-icons-sharp"> menu </span>
+          </button>
+          
+          <div class="profile">
+            <div class="info">
+              <p>Hey, <b>Anand</b></p>
+              <small class="text-muted">Admin</small>
+            </div>
+            <div class="profile-photo">
+              <img src="./images/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg" alt="Profile Picture" />
+            </div>
+            
+          </div>
+        </div>
+
+        <div id="form-id">
+       <form action="" id="main_form">
+        <label for="product_id">Product Id</label>
+         <input type="text" id="product_id" placeholder="Enter Product Id">
+         <br>
+         <label for="product_image">Product Image</label>
+        <input type="text" id="product_image" placeholder="Enter Image Url">
+        <br>
+        <label for="product_name">Product Name</label>
+        <input type="text" id="product_name" placeholder="Enter Product Name">
+        <br>
+        <label for="product_price">Product Price</label>
+        <input type="number" id="product_price" placeholder="Enter Product price">
+        <br>
+        <label for="product_type" id="product_type_label">Product Type</label>
+        <input type="text" id="product_type" placeholder="Enter Product type">
+        <br>
+        <label for="priority" id="">Change</label>
+        <select id="priority">
+          <option>--Select One--</option>
+          <option value="update">Edit Product</option>
+          <option value="add">Add Product</option>
+        </select>
+        <input type="submit" placeholder="Submit"  name="submit_name" id="submit_id">
+       </form>
+        </div>
+
+
+        
+      </div>
+    </div>
+
+    
+  </body>
+</html>
+<script src="./script/admin.js"></script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrystaLine | Payment</title>
+    <link rel="stylesheet" href="./style/payment.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div id="nav">
+        <div id="logo-name">
+            <img id="logo" src="./images/Crystaline (2).png" alt="#">
+            <a id="rbname" href="index.html"></a>
+        </div>
+    </div>
+    <div class="checkout-cont">
+        <div id="left-side">
+            <div id="address">
+                <h4>1. Shipping Address</h4>
+                <div class="input-control"> Country/Region <br>
+                    <input type="text" id="address-input" autocomplete="off" class="country" required>
+                </div> <br>
+                <div class="input-control"> Full Name <br>
+                    <input type="text" id="address-input"  autocomplete="off" class="fullName" required>
+                </div> <br>
+                <div class="input-control"> Enter Your Address <br>
+                    <input type="text" id="address-input"  autocomplete="off" class="address" required>
+                </div> <br>
+                <div class="input-control"> Contact Number <br>
+                    <input type="text" id="address-input"  autocomplete="off" class="number" required>
+                </div>
+            </div>
+            <div id="payment">
+                <h4>2.Payment Methods</h4>
+                <p><input type="radio" name="payment">DEBIT/CREDIT CARD</p>
+                <p><input type="radio" name="payment">Pay Later</p>
+                <p><input type="radio" name="payment">Pay On Delivery</p>
+                <p><input type="radio" name="payment">GPAY</p>
+                <p><input type="radio" name="payment">Paypal</p>
+                <button onclick="toPay()" >PAY</button>
+            </div>
+        </div>
+        <div id="summary">
+            <h4>
+                <p>Order Summary:</p>
+                <p><span id="total-count"></span>Items</p>
+            </h4>
+            <div id="item-cont"></div>
+            <p><span>Your items will be shipped in two business days once we receive the order.</span></p> <hr>
+            <!-- <p><b>Total to pay:</b> <span id="to-pay"></span></p> -->
+        </div>
+    </div>
+</body>
+<script src="./script/payment.js"></script>
+</html>
